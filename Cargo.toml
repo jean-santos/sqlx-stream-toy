@@ -1,0 +1,22 @@
+[package]
+name = "simpletest"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.66"
+array_tool = "1.0.3"
+futures = "0.3.25"
+# tokio = { version = "1", features = ["full"] }
+# sqlx = { version = "0.6", features = [ "runtime-tokio-rustls", "sqlite" ] }
+sqlx = { version = "0.5.2", features = ["runtime-tokio-native-tls", "sqlite"]}
+tokio = {version = "1.5.0", features = ["full"]}
+structopt = "0.3"
+rand = "0.8.3"
+fastrand = "1"
+num_cpus = "1.0"
+rusqlite = "0.25.3"
+tinystr = "0.4.10"
+ouroboros = { version = "0.15", default-features = false }
